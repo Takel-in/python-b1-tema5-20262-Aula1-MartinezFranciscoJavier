@@ -58,12 +58,26 @@ Exemple:
 
 # Corret and overwrite class Student here 
 class Student:
-    def __init__(self):
-        pass
-       
+    # Inicialización del estudiante.
+    def __init__(self, name, age, average):
+            self.name = name
+            self.age = age
+            self.average = average
+        
+    # Muestra los datos básicos del estudiante
+    def describe(self):
+        return f"Name: {self.name}, Age: {self.age}, Average: {self.average}"
+        
+    # Actualiz la media, haciendo media con la media anterior.
+    def grade(self, new_average):
+        self.average = (new_average + self.average) / 2
+        
+
+    
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# student1 = Student("Pedro", 49, 8.5)
-# student1.grade(9.2)
-# print(student1.describe())
+student1 = Student("Pedro", 49, 8.5)
+student1.grade(9.2)
+print(student1.describe())

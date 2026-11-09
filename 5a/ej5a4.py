@@ -95,14 +95,33 @@ Exemple:
 """
 
 # Write class DatabaseConnector here
+class DatabaseConnector():
+    def __init__(self):
+        self.database = None
+
+    # La clase recibe el tipo de base de datos a la que debe conectarse.
+    def connect(self, database):
+        self.database = database
+        database.connected = True
 
 # Write class SQLDatabase here
+class SQLDatabase():
 
+    # Inicializamos la base de datos con la que vamos a trabajar.
+    def __init__(self):
+        self.connected = False
 
 # Write class PostgresDatabase here
-
+class PostgresDatabase():
+    # Inicializamos la base de datos con la que vamos a trabajar.    
+    def __init__(self):
+        self.connected = False
 
 # Write class RedshiftDatabase here
+class RedshiftDatabase():
+    # Inicializamos la base de datos con la que vamos a trabajar.    
+    def __init__(self):
+        self.connected = False
 
 
 # Por la propia naturaleza del ejercicios no se puede probar imprimiendo por pantalla, 
